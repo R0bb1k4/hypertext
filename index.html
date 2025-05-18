@@ -186,7 +186,7 @@
     <p class="glitch" data-text="Something went wrong...">Something went wrong...</p>
   </div>
   <canvas id="nightSkyCanvas"></canvas>
-  <audio id="errorSound" src="assets/machine-error-by-prettysleepy-art-12669.mp3"></audio>
+  <audio id="errorSound" src="assets/machine-error-by-prettysleepy-art-12669.mp3" preload="auto"></audio>
   <script>
     const canvas = document.getElementById('nightSkyCanvas');
     const ctx = canvas.getContext('2d');
@@ -275,7 +275,7 @@
       document.getElementById('closing').style.display = 'block'; // Show closing
 
       const errorSound = document.getElementById("errorSound"); // Ambil elemen audio
-      errorSound.volume = 0.5; // Atur volume ke 50%
+      errorSound.volume = 1; // Atur volume ke 100%
       errorSound.currentTime = 0; // Reset waktu audio ke awal
       errorSound.play(); // Putar suara error
     }
@@ -288,8 +288,8 @@ You are the story I've been waiting to write
 but never knew how to end.`;
 
     let index = 0;
-    const typingSound = new Audio("assets/tiktok.mp3"); // Buat elemen audio sekali
-    typingSound.volume = 1; // Atur volume ke 100%
+    const typingSound = new Audio("assets/tiktok.mp3"); // Pastikan file ini ada dan path benar!
+    typingSound.volume = 1;
 
     typingSound.addEventListener('error', (e) => {
       console.error('Error playing audio:', e);
