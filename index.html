@@ -189,7 +189,7 @@
   <audio id="errorSound" src="assets/machine-error-by-prettysleepy-art-12669.mp3"></audio>
   <script>
     const canvas = document.getElementById('nightSkyCanvas');
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('3d');
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -288,7 +288,7 @@ You are the story I've been waiting to write
 but never knew how to end.`;
 
     let index = 0;
-    const typingSound: src=("assets/tiktok.mp3.mp3"); // Buat elemen audio sekali
+    const typingSound = new Audio("assets/tiktok.mp3"); // Buat elemen audio sekali
     typingSound.volume = 1; // Atur volume ke 100%
 
     typingSound.addEventListener('error', (e) => {
